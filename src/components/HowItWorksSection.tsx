@@ -54,7 +54,7 @@ const HowItWorksSection = () => {
           <div className="text-center mt-16">
             <a
               href="#contact"
-              className="inline-block bg-accent-green text-bg-primary font-body font-semibold text-[15px] px-7 py-3.5 rounded-[10px] hover:brightness-90 transition-all"
+              className="btn-shimmer inline-block bg-accent-green text-bg-primary font-body font-semibold text-[15px] px-7 py-3.5 rounded-[10px] transition-all"
             >
               Start Now — Only 5 Spots →
             </a>

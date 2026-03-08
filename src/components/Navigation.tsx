@@ -22,7 +22,7 @@ const Navigation = () => {
         <span className="font-heading font-bold text-lg text-text-primary">Kalob Adair</span>
         <a
           href="#contact"
-          className="bg-accent-green text-bg-primary font-body font-semibold text-sm px-5 py-2.5 rounded-lg hover:brightness-90 transition-all duration-250"
+          className="btn-shimmer bg-accent-green text-bg-primary font-body font-semibold text-sm px-5 py-2.5 rounded-lg transition-all"
         >
           <span className="hidden sm:inline">Get Your Site →</span>
           <span className="sm:hidden">Get Started →</span>

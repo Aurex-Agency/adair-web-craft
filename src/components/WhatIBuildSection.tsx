@@ -81,7 +81,7 @@ const WhatIBuildSection = () => {
               <p className="font-body text-base text-text-muted mb-8">with a plan that fits your budget</p>
               <a
                 href="#contact"
-                className="inline-block bg-accent-green text-bg-primary font-body font-semibold text-[15px] px-7 py-3.5 rounded-[10px] hover:brightness-90 transition-all"
+                className="btn-shimmer inline-block bg-accent-green text-bg-primary font-body font-semibold text-[15px] px-7 py-3.5 rounded-[10px] transition-all"
               >
                 Lock In Your Free Hosting →
               </a>

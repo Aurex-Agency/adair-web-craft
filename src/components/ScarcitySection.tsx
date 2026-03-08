@@ -48,7 +48,7 @@ const ScarcitySection = () => {
         <AnimateIn delay={0.35}>
           <a
             href="#contact"
-            className="inline-block bg-white text-[#1D4ED8] font-body font-semibold text-base px-9 py-4 rounded-[10px] hover:bg-[#F0F9FF] transition-colors mt-6"
+            className="btn-shimmer inline-block bg-white text-[#1D4ED8] font-body font-semibold text-base px-9 py-4 rounded-[10px] transition-colors mt-6"
           >
             Claim My Free Hosting Now →
           </a>
