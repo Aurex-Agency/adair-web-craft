@@ -113,7 +113,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <label className={labelClass}>Phone Number</label>
-                  <input type="tel" placeholder="(662) 555-0000" required className={inputClass} />
+                  <input type="tel" placeholder="(662) 555-0000" required className={inputClass} value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} />
                 </div>
                 <div>
                   <label className={labelClass}>Email Address <span className="normal-case tracking-normal">(optional)</span></label>
