@@ -40,7 +40,7 @@ const HowItWorksSection = () => {
           {steps.map((step, i) => (
             <AnimateIn key={i} delay={i * 0.15}>
               <div className="relative">
-                <span className="font-heading font-bold text-[80px] leading-none text-text-dim/30 select-none">
+                <span className="font-heading font-bold text-[80px] leading-none text-accent-blue/20 select-none">
                   {step.num}
                 </span>
                 <h3 className="font-heading font-semibold text-[22px] text-text-primary mt-2 mb-3">{step.title}</h3>
