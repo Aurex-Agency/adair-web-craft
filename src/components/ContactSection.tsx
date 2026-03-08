@@ -161,9 +161,10 @@ const ContactSection = () => {
                 </div>
                 <button
                   type="submit"
+                  disabled={isSubmitting}
                   className="btn-shimmer w-full bg-accent-green text-bg-primary font-body font-bold text-base py-4 rounded-[10px] transition-all"
                 >
-                  Claim My Spot →
+                  {isSubmitting ? 'Sending...' : 'Claim My Spot →'}
                 </button>
                 <p className="font-body text-xs text-text-muted text-center">
                   I'll personally reach out within a few hours.
