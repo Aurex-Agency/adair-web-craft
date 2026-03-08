@@ -117,7 +117,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <label className={labelClass}>Email Address <span className="normal-case tracking-normal">(optional)</span></label>
-                  <input type="email" placeholder="john@example.com" className={inputClass} />
+                  <input type="email" placeholder="john@example.com" className={inputClass} value={emailAddress} onChange={(e) => setEmailAddress(e.target.value)} />
                 </div>
                 <div>
                   <label className={labelClass}>Type of Business</label>
