@@ -121,7 +121,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <label className={labelClass}>Type of Business</label>
-                  <select required className={inputClass + " appearance-none"} defaultValue="">
+                  <select required className={inputClass + " appearance-none"} value={typeOfBusiness} onChange={(e) => setTypeOfBusiness(e.target.value)}>
                     <option value="" disabled>Select your industry</option>
                     <option>Restaurant / Food</option>
                     <option>Retail / Boutique</option>
