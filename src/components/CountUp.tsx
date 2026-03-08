@@ -30,7 +30,7 @@ const CountUp = ({ target, suffix = "" }: CountUpProps) => {
   }, [inView, target]);
 
   return (
-    <span ref={ref} className="font-syne font-extrabold text-[56px] text-accent-blue leading-none">
+    <span ref={ref} className="font-heading font-bold text-[56px] text-accent-blue leading-none">
       {count}{suffix}
     </span>
   );

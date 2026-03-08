@@ -13,16 +13,16 @@ const Navigation = () => {
     <nav
       className="sticky top-0 z-40 h-[68px] flex items-center justify-between px-6 transition-all duration-[400ms] ease-in-out"
       style={{
-        background: scrolled ? "rgba(8, 8, 8, 0.85)" : "transparent",
+        background: scrolled ? "hsla(228, 25%, 6%, 0.85)" : "transparent",
         backdropFilter: scrolled ? "blur(20px)" : "none",
         WebkitBackdropFilter: scrolled ? "blur(20px)" : "none",
       }}
     >
       <div className="flex items-center justify-between w-full max-w-[1200px] mx-auto">
-        <span className="font-syne font-bold text-lg text-text-primary">Kalob Adair</span>
+        <span className="font-heading font-bold text-lg text-text-primary">Kalob Adair</span>
         <a
           href="#contact"
-          className="bg-accent-green text-bg-primary font-inter font-semibold text-sm px-5 py-2.5 rounded-lg hover:brightness-90 transition-all duration-250"
+          className="bg-accent-green text-bg-primary font-body font-semibold text-sm px-5 py-2.5 rounded-lg hover:brightness-90 transition-all duration-250"
         >
           <span className="hidden sm:inline">Get Your Site →</span>
           <span className="sm:hidden">Get Started →</span>

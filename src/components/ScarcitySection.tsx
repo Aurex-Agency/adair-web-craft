@@ -10,7 +10,7 @@ const ScarcitySection = () => {
     <section className="py-[72px] md:py-32 px-6" style={{ background: "linear-gradient(135deg, #1D4ED8 0%, #1E40AF 100%)" }}>
       <div className="max-w-[1200px] mx-auto text-center">
         <AnimateIn>
-          <p className="font-inter text-[11px] font-semibold tracking-[0.18em] uppercase text-white/60 mb-6">
+          <p className="font-body text-[11px] font-semibold tracking-[0.18em] uppercase text-white/60 mb-6">
             — THIS WEEK ONLY —
           </p>
         </AnimateIn>
@@ -24,7 +24,7 @@ const ScarcitySection = () => {
           </h2>
         </AnimateIn>
         <AnimateIn delay={0.1}>
-          <p className="font-inter text-lg text-white/75 mb-10">
+          <p className="font-body text-lg text-white/75 mb-10">
             That's up to $297 in savings. Spots are going fast.
           </p>
         </AnimateIn>
@@ -39,7 +39,7 @@ const ScarcitySection = () => {
                 transition={{ duration: shouldReduceMotion ? 0 : 1.2, ease: "easeOut" }}
               />
             </div>
-            <p className="font-inter text-[13px] text-white/65 mt-3">
+            <p className="font-body text-[13px] text-white/65 mt-3">
               1 of 5 spots claimed · 4 remaining
             </p>
           </div>
@@ -48,7 +48,7 @@ const ScarcitySection = () => {
         <AnimateIn delay={0.35}>
           <a
             href="#contact"
-            className="inline-block bg-white text-[#1D4ED8] font-inter font-semibold text-base px-9 py-4 rounded-[10px] hover:bg-[#F0F9FF] transition-colors mt-6"
+            className="inline-block bg-white text-[#1D4ED8] font-body font-semibold text-base px-9 py-4 rounded-[10px] hover:bg-[#F0F9FF] transition-colors mt-6"
           >
             Claim My Free Hosting Now →
           </a>
