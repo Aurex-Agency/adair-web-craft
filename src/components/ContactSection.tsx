@@ -109,7 +109,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <label className={labelClass}>Business Name</label>
-                  <input type="text" placeholder="Smith's Hardware" required className={inputClass} />
+                  <input type="text" placeholder="Smith's Hardware" required className={inputClass} value={businessName} onChange={(e) => setBusinessName(e.target.value)} />
                 </div>
                 <div>
                   <label className={labelClass}>Phone Number</label>
