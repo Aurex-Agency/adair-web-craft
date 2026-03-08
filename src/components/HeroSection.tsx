@@ -94,7 +94,7 @@ const HeroSection = () => {
               href="#contact"
               className="btn-shimmer bg-accent-green text-bg-primary font-body font-semibold text-[15px] px-7 py-3.5 rounded-[10px] transition-all"
             >
-              Claim Your Spot — Only 5 Left →
+              Claim Your Spot — Only 4 Left →
             </a>
             <a
               href="#services"
