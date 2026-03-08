@@ -66,8 +66,8 @@ const HeroSection = () => {
         </AnimateIn>
 
         <AnimateIn delay={0.5}>
-          <div className="w-full max-w-[800px] py-4">
-            <p className="font-body text-[11px] font-semibold tracking-[0.2em] uppercase text-text-dim text-center mb-3">
+          <div className="w-full max-w-[1000px] py-4">
+            <p className="font-body text-[11px] font-semibold tracking-[0.2em] uppercase text-text-primary text-center mb-3">
               ▶ Watch — 3 Min
             </p>
             <div
@@ -82,7 +82,7 @@ const HeroSection = () => {
                 className="absolute inset-0 w-full h-full border-none"
               />
             </div>
-            <p className="font-body text-sm italic text-text-dim text-center mt-3">
+            <p className="font-body text-sm italic text-text-primary text-center mt-3">
               See exactly how I'll get your business found on Google in 48 hours.
             </p>
           </div>
