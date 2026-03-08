@@ -49,7 +49,7 @@ const ScrollIndicator = () => (
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center px-6 overflow-hidden">
+    <section className="relative min-h-screen flex flex-col items-center justify-center px-6 overflow-hidden pt-[108px]">
       <div className="relative z-10 max-w-[900px] text-center flex flex-col items-center">
         <AnimateIn delay={0}>
           <span className="font-body text-[11px] font-semibold tracking-[0.18em] uppercase text-accent-blue mb-8 block">
