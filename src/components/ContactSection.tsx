@@ -105,7 +105,7 @@ const ContactSection = () => {
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div>
                   <label className={labelClass}>Full Name</label>
-                  <input type="text" placeholder="John Smith" required className={inputClass} />
+                  <input type="text" placeholder="John Smith" required className={inputClass} value={fullName} onChange={(e) => setFullName(e.target.value)} />
                 </div>
                 <div>
                   <label className={labelClass}>Business Name</label>
