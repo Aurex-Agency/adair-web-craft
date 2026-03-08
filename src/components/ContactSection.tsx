@@ -2,13 +2,48 @@ import { useState, FormEvent } from "react";
 import { CheckCircle, Zap, Phone } from "lucide-react";
 import AnimateIn from "./AnimateIn";
 
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby1Q7O6lRN-fuM373VwHzjSJ496hQFv0xHJ3VKJPRrWyORqbFwgLV9aM3ToQXmnMsg81g/exec';
+
 const ContactSection = () => {
   const [hasWebsite, setHasWebsite] = useState<"yes" | "no" | null>(null);
   const [submitted, setSubmitted] = useState(false);
+  const [fullName, setFullName] = useState('');
+  const [businessName, setBusinessName] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState('');
+  const [emailAddress, setEmailAddress] = useState('');
+  const [typeOfBusiness, setTypeOfBusiness] = useState('');
+  const [message, setMessage] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setIsSubmitting(true);
+
+    const formData = new FormData();
+    formData.append('Full Name', fullName);
+    formData.append('Business Name', businessName);
+    formData.append('Phone Number', phoneNumber);
+    formData.append('Email Address', emailAddress);
+    formData.append('Type of Business', typeOfBusiness);
+    formData.append('Has Website', hasWebsite === 'yes' ? 'Yes' : 'No');
+    formData.append('Message', message);
+
+    try {
+      const response = await fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        body: formData,
+      });
+      const result = await response.json();
+      if (result.result === 'success') {
+        setSubmitted(true);
+      } else {
+        alert('Something went wrong. Please try again or call/text (662) 507-8886.');
+      }
+    } catch (err) {
+      alert('Could not submit the form. Please try again or call/text (662) 507-8886.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const inputClass =
