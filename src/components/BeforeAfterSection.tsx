@@ -59,16 +59,16 @@ const BeforeAfterSection = () => {
               }}
               transition={{ duration: 0.5, ease: "easeOut" }}
             >
-              <div className="relative">
+              <div className="relative aspect-[4/3] md:aspect-auto">
                 <img
                   src={beforeImg}
                   alt="Website before redesign"
-                  className="w-full h-auto block"
+                  className="w-full h-full md:h-auto object-cover object-top block"
                 />
                 <motion.img
                   src={afterImg}
                   alt="Website after redesign"
-                  className="absolute inset-0 w-full h-full object-cover"
+                  className="absolute inset-0 w-full h-full object-cover object-top"
                   animate={{ opacity: active === "after" ? 1 : 0 }}
                   transition={{ duration: 0.4, ease: "easeInOut" }}
                 />
