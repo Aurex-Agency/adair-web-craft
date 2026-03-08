@@ -47,6 +47,7 @@
     @apply bg-bg-primary text-text-primary font-body;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
   }
   h1, h2 {
     font-family: 'Space Grotesk', sans-serif;
