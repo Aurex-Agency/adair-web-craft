@@ -155,6 +155,8 @@ const ContactSection = () => {
                   <textarea
                     placeholder="Tell me a little about your business..."
                     className={inputClass + " h-[100px] resize-none"}
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
                   />
                 </div>
                 <button
