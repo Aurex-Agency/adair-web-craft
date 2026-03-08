@@ -40,6 +40,9 @@
 }
 
 @layer base {
+  html {
+    overflow-x: hidden;
+  }
   * {
     @apply border-border;
   }
