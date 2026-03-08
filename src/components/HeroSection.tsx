@@ -75,7 +75,7 @@ const HeroSection = () => {
               style={{ boxShadow: "0 0 40px rgba(99, 179, 237, 0.25)" }}
             >
               <iframe
-                src="https://www.youtube.com/embed/WpYJaePa7ts"
+                src="https://www.youtube.com/embed/WpYJaePa7ts?autoplay=1&mute=1"
                 title="VSL Video"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
