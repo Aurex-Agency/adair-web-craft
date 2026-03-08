@@ -17,7 +17,7 @@ const ContactSection = () => {
 
   return (
     <section id="contact" className="py-[72px] md:py-32 px-6">
-      <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-[45%_55%] gap-12 md:gap-16">
+      <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-[42%_1fr] gap-12 lg:gap-16">
         {/* Left */}
         <AnimateIn>
           <div>
