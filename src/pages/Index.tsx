@@ -21,6 +21,7 @@ const Index = () => {
         <Navigation />
         <HeroSection />
         <PainPointsSection />
+        <BeforeAfterSection />
         <WhatIBuildSection />
         <ScarcitySection />
         <WhyTrustSection />
