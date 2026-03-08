@@ -105,7 +105,7 @@ const HeroSection = () => {
           </div>
         </AnimateIn>
 
-        <AnimateIn delay={0.7}>
+        <AnimateIn delay={0.8}>
           <div className="flex items-center gap-3 mt-10">
             <div className="flex -space-x-1.5">
               {[
