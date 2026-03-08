@@ -13,9 +13,9 @@ const Navigation = () => {
     <nav
       className="sticky top-0 z-50 h-[68px] flex items-center justify-between px-6 transition-all duration-[400ms] ease-in-out"
       style={{
-        background: scrolled ? "transparent" : "hsla(228, 25%, 6%, 0.85)",
-        backdropFilter: scrolled ? "none" : "blur(20px)",
-        WebkitBackdropFilter: scrolled ? "none" : "blur(20px)",
+        background: "transparent",
+        backdropFilter: "none",
+        WebkitBackdropFilter: "none",
       }}
     >
       <div className="flex items-center justify-between w-full max-w-[1200px] mx-auto">
