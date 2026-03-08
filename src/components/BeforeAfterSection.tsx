@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import AnimateIn from "./AnimateIn";
 import beforeImg from "@/assets/nettech-before.png";
 import afterImg from "@/assets/nettech-after.png";
@@ -56,20 +56,23 @@ const BeforeAfterSection = () => {
                   ? "0 0 40px 8px hsla(217, 91%, 60%, 0.35), 0 0 80px 16px hsla(217, 91%, 60%, 0.15)"
                   : "0 4px 20px 0px hsla(0, 0%, 0%, 0.3)",
             }}
-            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
           >
-            <AnimatePresence mode="wait">
-              <motion.img
-                key={active}
-                src={active === "before" ? beforeImg : afterImg}
-                alt={active === "before" ? "Website before redesign" : "Website after redesign"}
+            {/* Both images stacked; crossfade via opacity */}
+            <div className="relative">
+              <img
+                src={beforeImg}
+                alt="Website before redesign"
                 className="w-full h-auto block"
-                initial={{ opacity: 0, scale: 0.97 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 1.02 }}
-                transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
               />
-            </AnimatePresence>
+              <motion.img
+                src={afterImg}
+                alt="Website after redesign"
+                className="absolute inset-0 w-full h-full object-cover"
+                animate={{ opacity: active === "after" ? 1 : 0 }}
+                transition={{ duration: 0.4, ease: "easeInOut" }}
+              />
+            </div>
           </motion.div>
         </AnimateIn>
       </div>
