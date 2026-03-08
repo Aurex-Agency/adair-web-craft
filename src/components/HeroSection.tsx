@@ -65,7 +65,30 @@ const HeroSection = () => {
           </p>
         </AnimateIn>
 
-        <AnimateIn delay={0.55}>
+        <AnimateIn delay={0.5}>
+          <div className="w-full max-w-[800px] py-4">
+            <p className="font-body text-[11px] font-semibold tracking-[0.2em] uppercase text-text-dim text-center mb-3">
+              ▶ Watch — 3 Min
+            </p>
+            <div
+              className="relative w-full aspect-video rounded-xl overflow-hidden"
+              style={{ boxShadow: "0 0 40px rgba(99, 179, 237, 0.25)" }}
+            >
+              <iframe
+                src="https://www.youtube.com/embed/WpYJaePa7ts"
+                title="VSL Video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="absolute inset-0 w-full h-full border-none"
+              />
+            </div>
+            <p className="font-body text-sm italic text-text-dim text-center mt-3">
+              See exactly how I'll get your business found on Google in 48 hours.
+            </p>
+          </div>
+        </AnimateIn>
+
+        <AnimateIn delay={0.65}>
           <div className="flex flex-col sm:flex-row items-center gap-4 mt-10">
             <a
               href="#contact"
@@ -82,7 +105,7 @@ const HeroSection = () => {
           </div>
         </AnimateIn>
 
-        <AnimateIn delay={0.7}>
+        <AnimateIn delay={0.8}>
           <div className="flex items-center gap-3 mt-10">
             <div className="flex -space-x-1.5">
               {[
