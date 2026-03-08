@@ -47,7 +47,8 @@
     @apply border-border;
   }
   body {
-    @apply bg-bg-primary text-text-primary font-body;
+    @apply text-text-primary font-body;
+    background-color: rgb(8, 12, 42);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
