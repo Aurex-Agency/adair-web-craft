@@ -124,7 +124,7 @@ const ContactSection = () => {
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-accent-green text-bg-primary font-body font-bold text-base py-4 rounded-[10px] hover:brightness-90 transition-all"
+                  className="btn-shimmer w-full bg-accent-green text-bg-primary font-body font-bold text-base py-4 rounded-[10px] transition-all"
                 >
                   Claim My Spot →
                 </button>

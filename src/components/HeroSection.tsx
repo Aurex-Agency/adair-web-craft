@@ -69,13 +69,13 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row items-center gap-4 mt-10">
             <a
               href="#contact"
-              className="bg-accent-green text-bg-primary font-body font-semibold text-[15px] px-7 py-3.5 rounded-[10px] hover:brightness-90 transition-all"
+              className="btn-shimmer bg-accent-green text-bg-primary font-body font-semibold text-[15px] px-7 py-3.5 rounded-[10px] transition-all"
             >
               Claim Your Spot — Only 5 Left →
             </a>
             <a
               href="#services"
-              className="border border-border-custom text-text-primary font-body font-medium text-[15px] px-7 py-3.5 rounded-[10px] hover:border-text-dim transition-colors bg-transparent"
+              className="btn-glow border border-border-custom text-text-primary font-body font-medium text-[15px] px-7 py-3.5 rounded-[10px] transition-colors bg-transparent"
             >
               See What's Included ↓
             </a>
