@@ -2,6 +2,7 @@ import AnnouncementBar from "@/components/AnnouncementBar";
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import PainPointsSection from "@/components/PainPointsSection";
+import BeforeAfterSection from "@/components/BeforeAfterSection";
 import WhatIBuildSection from "@/components/WhatIBuildSection";
 import ScarcitySection from "@/components/ScarcitySection";
 import WhyTrustSection from "@/components/WhyTrustSection";
@@ -20,6 +21,7 @@ const Index = () => {
         <Navigation />
         <HeroSection />
         <PainPointsSection />
+        <BeforeAfterSection />
         <WhatIBuildSection />
         <ScarcitySection />
         <WhyTrustSection />
