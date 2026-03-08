@@ -22,7 +22,7 @@ const addOns = [
 
 const WhatIBuildSection = () => {
   return (
-    <section id="services" className="bg-bg-alt py-[72px] md:py-32 px-6">
+    <section id="services" className="py-[72px] md:py-32 px-6">
       <div className="max-w-[1200px] mx-auto">
         <AnimateIn>
           <p className="font-body text-[11px] font-semibold tracking-[0.18em] uppercase text-accent-blue text-center mb-6">
