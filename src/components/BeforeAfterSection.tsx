@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import AnimateIn from "./AnimateIn";
 import beforeImg from "@/assets/nettech-before.png";
 import afterImg from "@/assets/nettech-after.png";
@@ -47,21 +48,29 @@ const BeforeAfterSection = () => {
             </button>
           </div>
 
-          <div className="relative">
-            <div
-              className={`rounded-2xl overflow-hidden transition-all duration-500 ${
+          <motion.div
+            className="relative rounded-2xl overflow-hidden"
+            animate={{
+              boxShadow:
                 active === "after"
-                  ? "shadow-[0_0_40px_8px_hsl(var(--accent)/0.35),0_0_80px_16px_hsl(var(--accent)/0.15)]"
-                  : "shadow-lg"
-              }`}
-            >
-              <img
+                  ? "0 0 40px 8px hsla(217, 91%, 60%, 0.35), 0 0 80px 16px hsla(217, 91%, 60%, 0.15)"
+                  : "0 4px 20px 0px hsla(0, 0%, 0%, 0.3)",
+            }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <AnimatePresence mode="wait">
+              <motion.img
+                key={active}
                 src={active === "before" ? beforeImg : afterImg}
                 alt={active === "before" ? "Website before redesign" : "Website after redesign"}
                 className="w-full h-auto block"
+                initial={{ opacity: 0, scale: 0.97 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 1.02 }}
+                transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
               />
-            </div>
-          </div>
+            </AnimatePresence>
+          </motion.div>
         </AnimateIn>
       </div>
     </section>
