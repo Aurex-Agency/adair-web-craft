@@ -16,7 +16,7 @@ const ContactSection = () => {
   const labelClass = "font-body text-xs font-medium text-text-muted uppercase tracking-[0.1em] mb-1.5 block";
 
   return (
-    <section id="contact" className="bg-bg-primary py-[72px] md:py-32 px-6">
+    <section id="contact" className="py-[72px] md:py-32 px-6">
       <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-[45%_55%] gap-12 md:gap-16">
         {/* Left */}
         <AnimateIn>

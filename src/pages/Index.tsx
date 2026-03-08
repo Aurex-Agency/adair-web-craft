@@ -9,21 +9,25 @@ import HowItWorksSection from "@/components/HowItWorksSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import BackToTop from "@/components/BackToTop";
+import ScrollGradientBackground from "@/components/ScrollGradientBackground";
 
 const Index = () => {
   return (
-    <div className="noise-bg bg-bg-primary min-h-screen relative">
-      <AnnouncementBar />
-      <Navigation />
-      <HeroSection />
-      <PainPointsSection />
-      <WhatIBuildSection />
-      <ScarcitySection />
-      <WhyTrustSection />
-      <HowItWorksSection />
-      <ContactSection />
-      <Footer />
-      <BackToTop />
+    <div className="noise-bg min-h-screen relative">
+      <ScrollGradientBackground />
+      <div className="relative z-10">
+        <AnnouncementBar />
+        <Navigation />
+        <HeroSection />
+        <PainPointsSection />
+        <WhatIBuildSection />
+        <ScarcitySection />
+        <WhyTrustSection />
+        <HowItWorksSection />
+        <ContactSection />
+        <Footer />
+        <BackToTop />
+      </div>
     </div>
   );
 };

@@ -1,54 +1,6 @@
 import { motion, useReducedMotion } from "framer-motion";
-import { useEffect, useRef } from "react";
 import AnimateIn from "./AnimateIn";
 
-const HeroCanvas = () => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext("2d");
-    if (!ctx) return;
-
-    let animId: number;
-    const resize = () => {
-      canvas.width = canvas.offsetWidth;
-      canvas.height = canvas.offsetHeight;
-    };
-    resize();
-    window.addEventListener("resize", resize);
-
-    const blobs = [
-      { color: "rgba(59, 130, 246, 0.08)", speed: 0.0003, offset: 0 },
-      { color: "rgba(163, 230, 53, 0.05)", speed: 0.0004, offset: 2 },
-      { color: "rgba(99, 102, 241, 0.06)", speed: 0.00025, offset: 4 },
-    ];
-
-    const draw = (time: number) => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      blobs.forEach((b) => {
-        const x = canvas.width * 0.5 + Math.sin(time * b.speed + b.offset) * canvas.width * 0.25;
-        const y = canvas.height * 0.5 + Math.cos(time * b.speed * 0.7 + b.offset) * canvas.height * 0.2;
-        const r = Math.min(canvas.width, canvas.height) * 0.45;
-        const grad = ctx.createRadialGradient(x, y, 0, x, y, r);
-        grad.addColorStop(0, b.color);
-        grad.addColorStop(1, "transparent");
-        ctx.fillStyle = grad;
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-      });
-      animId = requestAnimationFrame(draw);
-    };
-    animId = requestAnimationFrame(draw);
-
-    return () => {
-      cancelAnimationFrame(animId);
-      window.removeEventListener("resize", resize);
-    };
-  }, []);
-
-  return <canvas ref={canvasRef} className="absolute inset-0 w-full h-full" />;
-};
 
 const HeroHeadline = () => {
   const shouldReduceMotion = useReducedMotion();
@@ -97,8 +49,7 @@ const ScrollIndicator = () => (
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center bg-bg-primary px-6 overflow-hidden">
-      <HeroCanvas />
+    <section className="relative min-h-screen flex flex-col items-center justify-center px-6 overflow-hidden">
       <div className="relative z-10 max-w-[900px] text-center flex flex-col items-center">
         <AnimateIn delay={0}>
           <span className="font-body text-[11px] font-semibold tracking-[0.18em] uppercase text-accent-blue mb-8 block">
