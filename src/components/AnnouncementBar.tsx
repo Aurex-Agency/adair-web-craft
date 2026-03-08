@@ -1,6 +1,6 @@
 const AnnouncementBar = () => {
   return (
-    <div className="bg-transparent border-b border-border-custom/30 h-10 flex items-center justify-center px-6 relative z-50">
+    <div className="bg-bg-surface border-b border-border-custom h-10 flex items-center justify-center px-6 relative z-50">
       <div className="flex items-center justify-between w-full max-w-[1200px]">
         <div className="flex items-center gap-2 mx-auto md:mx-0">
           <span className="w-2 h-2 rounded-full bg-accent-green animate-pulse-dot inline-block" />
