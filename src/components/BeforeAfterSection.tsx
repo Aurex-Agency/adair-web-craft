@@ -48,7 +48,7 @@ const BeforeAfterSection = () => {
             </button>
           </div>
 
-          <div className="px-3 md:px-0">
+          <div className="px-2 md:px-0">
             <motion.div
               className="relative rounded-xl md:rounded-2xl overflow-hidden"
               animate={{
@@ -59,27 +59,21 @@ const BeforeAfterSection = () => {
               }}
               transition={{ duration: 0.5, ease: "easeOut" }}
             >
-              {/* Scrollable container on mobile for readability */}
-              <div className="overflow-x-auto md:overflow-hidden">
-                <div className="relative min-w-[600px] md:min-w-0">
-                  <img
-                    src={beforeImg}
-                    alt="Website before redesign"
-                    className="w-full h-auto block"
-                  />
-                  <motion.img
-                    src={afterImg}
-                    alt="Website after redesign"
-                    className="absolute inset-0 w-full h-full object-cover"
-                    animate={{ opacity: active === "after" ? 1 : 0 }}
-                    transition={{ duration: 0.4, ease: "easeInOut" }}
-                  />
-                </div>
+              <div className="relative">
+                <img
+                  src={beforeImg}
+                  alt="Website before redesign"
+                  className="w-full h-auto block"
+                />
+                <motion.img
+                  src={afterImg}
+                  alt="Website after redesign"
+                  className="absolute inset-0 w-full h-full object-cover"
+                  animate={{ opacity: active === "after" ? 1 : 0 }}
+                  transition={{ duration: 0.4, ease: "easeInOut" }}
+                />
               </div>
             </motion.div>
-            <p className="text-center text-text-dim text-xs mt-3 md:hidden">
-              Swipe to see full image →
-            </p>
           </div>
         </AnimateIn>
       </div>
