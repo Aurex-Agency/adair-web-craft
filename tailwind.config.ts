@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        syne: ["Syne", "sans-serif"],
-        inter: ["Inter", "sans-serif"],
+        heading: ["Space Grotesk", "sans-serif"],
+        body: ["DM Sans", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -26,6 +26,7 @@ export default {
         "bg-primary": "hsl(var(--bg-primary))",
         "bg-surface": "hsl(var(--bg-surface))",
         "bg-surface-2": "hsl(var(--bg-surface-2))",
+        "bg-alt": "hsl(var(--bg-alt))",
         "border-custom": "hsl(var(--border-custom))",
         "accent-blue": "hsl(var(--accent-blue))",
         "accent-green": "hsl(var(--accent-green))",

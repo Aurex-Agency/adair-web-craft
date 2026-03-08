@@ -29,7 +29,7 @@ const PainPointsSection = () => {
     <section className="bg-bg-primary py-[72px] md:py-32 px-6">
       <div className="max-w-[1200px] mx-auto">
         <AnimateIn>
-          <p className="font-inter text-[11px] font-semibold tracking-[0.18em] uppercase text-accent-blue text-center mb-6">
+          <p className="font-body text-[11px] font-semibold tracking-[0.18em] uppercase text-accent-blue text-center mb-6">
             — THE REALITY —
           </p>
         </AnimateIn>
@@ -44,7 +44,7 @@ const PainPointsSection = () => {
           </h2>
         </AnimateIn>
         <AnimateIn delay={0.15}>
-          <p className="font-inter text-lg text-text-muted text-center max-w-[600px] mx-auto mb-16">
+          <p className="font-body text-lg text-text-muted text-center max-w-[600px] mx-auto mb-16">
             Your competitors already have websites. Every day without one is a day they win.
           </p>
         </AnimateIn>
@@ -60,8 +60,8 @@ const PainPointsSection = () => {
                     <Clock size={52} className="text-accent-blue" strokeWidth={1.5} />
                   )}
                 </div>
-                <h3 className="font-syne font-bold text-lg text-text-primary mb-3">{card.title}</h3>
-                <p className="font-inter text-[15px] text-text-muted leading-[1.8]">{card.body}</p>
+                <h3 className="font-heading font-semibold text-lg text-text-primary mb-3">{card.title}</h3>
+                <p className="font-body text-[15px] text-text-muted leading-[1.8]">{card.body}</p>
               </div>
             </AnimateIn>
           ))}

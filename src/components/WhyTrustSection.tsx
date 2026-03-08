@@ -28,7 +28,7 @@ const WhyTrustSection = () => {
     <section className="bg-bg-primary py-[72px] md:py-32 px-6">
       <div className="max-w-[1200px] mx-auto">
         <AnimateIn>
-          <p className="font-inter text-[11px] font-semibold tracking-[0.18em] uppercase text-accent-blue text-center mb-6">
+          <p className="font-body text-[11px] font-semibold tracking-[0.18em] uppercase text-accent-blue text-center mb-6">
             — WHY ME —
           </p>
         </AnimateIn>
@@ -46,12 +46,12 @@ const WhyTrustSection = () => {
           {cards.map((card, i) => (
             <AnimateIn key={i} delay={i * 0.1}>
               <div className="relative bg-bg-surface border border-border-custom rounded-2xl p-9 overflow-hidden transition-all duration-300 hover:border-accent-blue hover:shadow-[0_0_30px_rgba(59,130,246,0.1)] h-full">
-                <span className="absolute top-4 right-6 font-syne font-extrabold text-[80px] leading-none text-[#1A1A1A] select-none pointer-events-none">
+                <span className="absolute top-4 right-6 font-heading font-bold text-[80px] leading-none text-text-dim/30 select-none pointer-events-none">
                   {card.num}
                 </span>
                 <div className="relative z-10">
-                  <h3 className="font-syne font-bold text-xl text-text-primary mb-3">{card.title}</h3>
-                  <p className="font-inter text-[15px] text-text-muted leading-[1.8]">{card.body}</p>
+                  <h3 className="font-heading font-semibold text-xl text-text-primary mb-3">{card.title}</h3>
+                  <p className="font-body text-[15px] text-text-muted leading-[1.8]">{card.body}</p>
                 </div>
               </div>
             </AnimateIn>

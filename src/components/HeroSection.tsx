@@ -20,9 +20,9 @@ const HeroCanvas = () => {
     window.addEventListener("resize", resize);
 
     const blobs = [
-      { color: "rgba(59, 130, 246, 0.07)", speed: 0.0003, offset: 0 },
-      { color: "rgba(163, 230, 53, 0.04)", speed: 0.0004, offset: 2 },
-      { color: "rgba(59, 130, 246, 0.05)", speed: 0.00025, offset: 4 },
+      { color: "rgba(59, 130, 246, 0.08)", speed: 0.0003, offset: 0 },
+      { color: "rgba(163, 230, 53, 0.05)", speed: 0.0004, offset: 2 },
+      { color: "rgba(99, 102, 241, 0.06)", speed: 0.00025, offset: 4 },
     ];
 
     const draw = (time: number) => {
@@ -30,7 +30,7 @@ const HeroCanvas = () => {
       blobs.forEach((b) => {
         const x = canvas.width * 0.5 + Math.sin(time * b.speed + b.offset) * canvas.width * 0.25;
         const y = canvas.height * 0.5 + Math.cos(time * b.speed * 0.7 + b.offset) * canvas.height * 0.2;
-        const r = Math.min(canvas.width, canvas.height) * 0.4;
+        const r = Math.min(canvas.width, canvas.height) * 0.45;
         const grad = ctx.createRadialGradient(x, y, 0, x, y, r);
         grad.addColorStop(0, b.color);
         grad.addColorStop(1, "transparent");
@@ -60,7 +60,7 @@ const HeroHeadline = () => {
 
   return (
     <h1
-      className="font-syne font-extrabold text-text-primary leading-[1.05] tracking-[-0.03em]"
+      className="font-heading font-bold text-text-primary leading-[1.05] tracking-[-0.03em]"
       style={{ fontSize: "clamp(52px, 7vw, 88px)" }}
     >
       {allWords.map((word, i) => (
@@ -84,14 +84,14 @@ const HeroHeadline = () => {
 
 const ScrollIndicator = () => (
   <div className="flex flex-col items-center gap-2 mt-16">
-    <div className="relative w-[2px] h-10 bg-[#333333] rounded-full overflow-hidden">
+    <div className="relative w-[2px] h-10 bg-border-custom rounded-full overflow-hidden">
       <motion.div
         className="absolute top-0 left-0 w-full h-2 bg-text-primary rounded-full"
         animate={{ y: [0, 28], opacity: [1, 0] }}
         transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
       />
     </div>
-    <span className="font-inter text-[10px] tracking-[0.2em] text-text-dim uppercase">scroll</span>
+    <span className="font-body text-[10px] tracking-[0.2em] text-text-dim uppercase">scroll</span>
   </div>
 );
 
@@ -101,7 +101,7 @@ const HeroSection = () => {
       <HeroCanvas />
       <div className="relative z-10 max-w-[900px] text-center flex flex-col items-center">
         <AnimateIn delay={0}>
-          <span className="font-inter text-[11px] font-semibold tracking-[0.18em] uppercase text-accent-blue mb-8 block">
+          <span className="font-body text-[11px] font-semibold tracking-[0.18em] uppercase text-accent-blue mb-8 block">
             — WEB DESIGN · NORTH MISSISSIPPI —
           </span>
         </AnimateIn>
@@ -109,7 +109,7 @@ const HeroSection = () => {
         <HeroHeadline />
 
         <AnimateIn delay={0.4}>
-          <p className="font-inter text-lg text-text-muted max-w-[560px] leading-[1.8] mt-8">
+          <p className="font-body text-lg text-text-muted max-w-[560px] leading-[1.8] mt-8">
             I build fast, custom websites for local businesses in North Mississippi — sites that bring in real customers. No templates. No fluff. Just results.
           </p>
         </AnimateIn>
@@ -118,13 +118,13 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row items-center gap-4 mt-10">
             <a
               href="#contact"
-              className="bg-accent-green text-bg-primary font-inter font-semibold text-[15px] px-7 py-3.5 rounded-[10px] hover:brightness-90 transition-all"
+              className="bg-accent-green text-bg-primary font-body font-semibold text-[15px] px-7 py-3.5 rounded-[10px] hover:brightness-90 transition-all"
             >
               Claim Your Spot — Only 5 Left →
             </a>
             <a
               href="#services"
-              className="border border-[#333333] text-text-primary font-inter font-medium text-[15px] px-7 py-3.5 rounded-[10px] hover:border-[#555555] transition-colors bg-transparent"
+              className="border border-border-custom text-text-primary font-body font-medium text-[15px] px-7 py-3.5 rounded-[10px] hover:border-text-dim transition-colors bg-transparent"
             >
               See What's Included ↓
             </a>
@@ -141,14 +141,14 @@ const HeroSection = () => {
               ].map((a, i) => (
                 <div
                   key={i}
-                  className="w-5 h-5 rounded-full flex items-center justify-center font-inter text-[10px] font-semibold text-white border-2 border-bg-primary"
+                  className="w-5 h-5 rounded-full flex items-center justify-center font-body text-[10px] font-semibold text-white border-2 border-bg-primary"
                   style={{ background: a.bg }}
                 >
                   {a.letter}
                 </div>
               ))}
             </div>
-            <span className="font-inter text-[13px] text-text-muted">
+            <span className="font-body text-[13px] text-text-muted">
               30+ sites built · 48hr avg delivery · Kalob Adair, Digital Marketing Lead
             </span>
           </div>

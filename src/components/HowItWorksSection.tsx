@@ -20,10 +20,10 @@ const steps = [
 
 const HowItWorksSection = () => {
   return (
-    <section className="bg-[#0D0D0D] py-[72px] md:py-32 px-6">
+    <section className="bg-bg-alt py-[72px] md:py-32 px-6">
       <div className="max-w-[1200px] mx-auto">
         <AnimateIn>
-          <p className="font-inter text-[11px] font-semibold tracking-[0.18em] uppercase text-accent-blue text-center mb-6">
+          <p className="font-body text-[11px] font-semibold tracking-[0.18em] uppercase text-accent-blue text-center mb-6">
             — THE PROCESS —
           </p>
         </AnimateIn>
@@ -37,17 +37,14 @@ const HowItWorksSection = () => {
         </AnimateIn>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6 relative">
-          {/* Connector lines on desktop */}
-          <div className="hidden md:block absolute top-16 left-[33.33%] w-[1px] h-0 border-l border-dashed border-border-custom" />
-
           {steps.map((step, i) => (
             <AnimateIn key={i} delay={i * 0.15}>
               <div className="relative">
-                <span className="font-syne font-extrabold text-[80px] leading-none text-[#1A1A1A] select-none">
+                <span className="font-heading font-bold text-[80px] leading-none text-text-dim/30 select-none">
                   {step.num}
                 </span>
-                <h3 className="font-syne font-bold text-[22px] text-text-primary mt-2 mb-3">{step.title}</h3>
-                <p className="font-inter text-[15px] text-text-muted leading-[1.8]">{step.body}</p>
+                <h3 className="font-heading font-semibold text-[22px] text-text-primary mt-2 mb-3">{step.title}</h3>
+                <p className="font-body text-[15px] text-text-muted leading-[1.8]">{step.body}</p>
               </div>
             </AnimateIn>
           ))}
@@ -57,7 +54,7 @@ const HowItWorksSection = () => {
           <div className="text-center mt-16">
             <a
               href="#contact"
-              className="inline-block bg-accent-green text-bg-primary font-inter font-semibold text-[15px] px-7 py-3.5 rounded-[10px] hover:brightness-90 transition-all"
+              className="inline-block bg-accent-green text-bg-primary font-body font-semibold text-[15px] px-7 py-3.5 rounded-[10px] hover:brightness-90 transition-all"
             >
               Start Now — Only 5 Spots →
             </a>
