@@ -11,9 +11,9 @@ const Navigation = () => {
 
   return (
     <nav
-      className="sticky top-0 z-40 h-[68px] flex items-center justify-between px-6 transition-all duration-[400ms] ease-in-out"
+      className="sticky top-0 z-40 h-[68px] flex items-center justify-between px-6 transition-all duration-[400ms] ease-in-out backdrop-blur-xl"
       style={{
-        background: scrolled ? "hsla(228, 25%, 6%, 0.85)" : "transparent",
+        background: scrolled ? "hsla(228, 25%, 6%, 0.7)" : "transparent",
         backdropFilter: scrolled ? "blur(20px)" : "none",
         WebkitBackdropFilter: scrolled ? "blur(20px)" : "none",
       }}
