@@ -2,13 +2,48 @@ import { useState, FormEvent } from "react";
 import { CheckCircle, Zap, Phone } from "lucide-react";
 import AnimateIn from "./AnimateIn";
 
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby1Q7O6lRN-fuM373VwHzjSJ496hQFv0xHJ3VKJPRrWyORqbFwgLV9aM3ToQXmnMsg81g/exec';
+
 const ContactSection = () => {
   const [hasWebsite, setHasWebsite] = useState<"yes" | "no" | null>(null);
   const [submitted, setSubmitted] = useState(false);
+  const [fullName, setFullName] = useState('');
+  const [businessName, setBusinessName] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState('');
+  const [emailAddress, setEmailAddress] = useState('');
+  const [typeOfBusiness, setTypeOfBusiness] = useState('');
+  const [message, setMessage] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setIsSubmitting(true);
+
+    const formData = new FormData();
+    formData.append('Full Name', fullName);
+    formData.append('Business Name', businessName);
+    formData.append('Phone Number', phoneNumber);
+    formData.append('Email Address', emailAddress);
+    formData.append('Type of Business', typeOfBusiness);
+    formData.append('Has Website', hasWebsite === 'yes' ? 'Yes' : 'No');
+    formData.append('Message', message);
+
+    try {
+      const response = await fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        body: formData,
+      });
+      const result = await response.json();
+      if (result.result === 'success') {
+        setSubmitted(true);
+      } else {
+        alert('Something went wrong. Please try again or call/text (662) 507-8886.');
+      }
+    } catch (err) {
+      alert('Could not submit the form. Please try again or call/text (662) 507-8886.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const inputClass =
@@ -70,23 +105,23 @@ const ContactSection = () => {
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div>
                   <label className={labelClass}>Full Name</label>
-                  <input type="text" placeholder="John Smith" required className={inputClass} />
+                  <input type="text" placeholder="John Smith" required className={inputClass} value={fullName} onChange={(e) => setFullName(e.target.value)} />
                 </div>
                 <div>
                   <label className={labelClass}>Business Name</label>
-                  <input type="text" placeholder="Smith's Hardware" required className={inputClass} />
+                  <input type="text" placeholder="Smith's Hardware" required className={inputClass} value={businessName} onChange={(e) => setBusinessName(e.target.value)} />
                 </div>
                 <div>
                   <label className={labelClass}>Phone Number</label>
-                  <input type="tel" placeholder="(662) 555-0000" required className={inputClass} />
+                  <input type="tel" placeholder="(662) 555-0000" required className={inputClass} value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} />
                 </div>
                 <div>
                   <label className={labelClass}>Email Address <span className="normal-case tracking-normal">(optional)</span></label>
-                  <input type="email" placeholder="john@example.com" className={inputClass} />
+                  <input type="email" placeholder="john@example.com" className={inputClass} value={emailAddress} onChange={(e) => setEmailAddress(e.target.value)} />
                 </div>
                 <div>
                   <label className={labelClass}>Type of Business</label>
-                  <select required className={inputClass + " appearance-none"} defaultValue="">
+                  <select required className={inputClass + " appearance-none"} value={typeOfBusiness} onChange={(e) => setTypeOfBusiness(e.target.value)}>
                     <option value="" disabled>Select your industry</option>
                     <option>Restaurant / Food</option>
                     <option>Retail / Boutique</option>
@@ -120,13 +155,16 @@ const ContactSection = () => {
                   <textarea
                     placeholder="Tell me a little about your business..."
                     className={inputClass + " h-[100px] resize-none"}
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
                   />
                 </div>
                 <button
                   type="submit"
+                  disabled={isSubmitting}
                   className="btn-shimmer w-full bg-accent-green text-bg-primary font-body font-bold text-base py-4 rounded-[10px] transition-all"
                 >
-                  Claim My Spot →
+                  {isSubmitting ? 'Sending...' : 'Claim My Spot →'}
                 </button>
                 <p className="font-body text-xs text-text-muted text-center">
                   I'll personally reach out within a few hours.
